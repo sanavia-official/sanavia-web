@@ -1,1 +1,1 @@
-SANAVIA 官網 V1 完整部署包：將 index.html、style.css、logo.png 上傳到 GitHub sanavia-web 根目錄即可由 Vercel 自動部署。
+請將 index.html、style.css、logo.png、hero-image.png 上傳至 GitHub sanavia-web 根目錄。Vercel 會自動重新部署。
