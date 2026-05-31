@@ -41,9 +41,12 @@ details{max-width:900px;margin:14px auto}summary{cursor:pointer;font-size:20px;f
   word-break:keep-all;
 }
 .page-hero.refined p{
-  max-width:920px;
-  font-size:21px;
-  line-height:1.85;
+  max-width:760px;
+  font-size:20px;
+  line-height:1.95;
+  letter-spacing:.01em;
+  color:#334155;
+  text-wrap:balance;
 }
 .about-redesign{
   background:#fff;
@@ -178,7 +181,7 @@ details{max-width:900px;margin:14px auto}summary{cursor:pointer;font-size:20px;f
 @media(max-width:640px){
   .page-hero.refined{padding:48px 22px 44px}
   .page-hero.refined h1{font-size:34px;word-break:normal}
-  .page-hero.refined p{font-size:18px;line-height:1.75}
+  .page-hero.refined p{font-size:18px;line-height:1.82;max-width:100%}
   .about-story.clean{padding:26px 22px}
   .role-list{justify-content:flex-start}
   .values-row article{text-align:left}
