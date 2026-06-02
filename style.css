@@ -235,3 +235,17 @@ details{max-width:900px;margin:14px auto}summary{cursor:pointer;font-size:20px;f
 
 /* Fees and refund page refinements */
 .section-lead{max-width:820px;margin:0 auto 26px;color:#475569;font-size:18px;line-height:1.85;text-align:center}.price-card strong{display:block;color:var(--blue-dark);font-size:22px;margin:10px 0 12px}.gentle-note{margin-top:28px}.gentle-note a{color:var(--blue-dark);font-weight:900;text-decoration:none}.legal-list{padding-left:1.4em;margin:8px 0 22px;color:#334155;font-size:18px;line-height:1.9}.legal-list li{margin:8px 0}.legal-table-wrap{overflow-x:auto;margin:16px 0 24px}.legal-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.legal-table th,.legal-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:16px;line-height:1.65;color:#334155}.legal-table th{background:#f0f7ff;color:var(--blue-dark);font-weight:900}.legal-table tr:last-child td{border-bottom:none}.article-cta{margin-top:36px;padding:28px;border-radius:24px;background:linear-gradient(135deg,#f5fbff,#eef8f2);text-align:center}.article-cta h2{margin-top:0!important}
+
+/* Fees/refund table column balance */
+.legal-table th:nth-child(1),
+.legal-table td:nth-child(1){width:16%;min-width:128px;}
+.legal-table th:nth-child(2),
+.legal-table td:nth-child(2){width:18%;min-width:150px;white-space:nowrap;}
+.legal-table th:nth-child(3),
+.legal-table td:nth-child(3){width:16%;min-width:128px;white-space:nowrap;}
+.legal-table th:nth-child(4),
+.legal-table td:nth-child(4){width:50%;}
+@media(max-width:720px){
+  .legal-table th,.legal-table td{padding:14px 16px;font-size:15px;line-height:1.6;}
+  .legal-table th:nth-child(2),.legal-table td:nth-child(2){min-width:120px;}
+}
