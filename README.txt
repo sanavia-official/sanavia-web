@@ -4,3 +4,10 @@ SANAVIA 官網 V1.1：
 - 保留 hero-image.png 首頁右側照片。
 
 請將 index.html、style.css、logo.png、favicon.png、hero-image.png 上傳到 GitHub sanavia-web 根目錄。
+
+
+## v2.18 更新
+- 新增收費與退款規則頁。
+- Footer 新增收費與退款規則連結。
+- 預約與付款確認區加入收費與退款規則同意連結。
+- 服務頁與 FAQ 補充收費、延長服務與退款摘要。
