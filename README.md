@@ -13,6 +13,8 @@
 - `recruit.html`：陪診員招募
 - `terms.html`：服務條款
 - `privacy.html`：隱私權政策
+- `fees-refund.html`：收費與退款規則
+- `payment-success.html`：付款完成提示頁
 
 ## 注意事項
 
@@ -24,3 +26,10 @@
 ## 部署
 
 可直接放在 GitHub + Vercel 靜態網站部署。建議先推到 `develop` 分支測試 Vercel Preview，確認後再 PR 到 `main`。
+
+
+## v2.18 更新
+- 新增收費與退款規則頁。
+- Footer 新增收費與退款規則連結。
+- 預約與付款確認區加入收費與退款規則同意連結。
+- 服務頁與 FAQ 補充收費、延長服務與退款摘要。
