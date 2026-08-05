@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const switcher = document.createElement('div');
     switcher.className = 'language-switcher' + (extraClass ? ' ' + extraClass : '');
     switcher.setAttribute('aria-label', '語言選擇');
-    switcher.innerHTML = '<span>語言</span><button type="button" data-lang-choice="zh-Hant">繁</button><button type="button" data-lang-choice="zh-Hans">简</button>';
+    switcher.innerHTML = '<button type="button" data-lang-choice="zh-Hant" aria-label="切換為繁體中文">繁</button><span class="language-divider" aria-hidden="true">｜</span><button type="button" data-lang-choice="zh-Hans" aria-label="切換為簡體中文">简</button>';
     return switcher;
   }
 

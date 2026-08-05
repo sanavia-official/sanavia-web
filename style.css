@@ -257,3 +257,131 @@ details{max-width:900px;margin:14px auto}summary{cursor:pointer;font-size:20px;f
   .legal-table th,.legal-table td{padding:14px 16px;font-size:15px;line-height:1.6;}
   .legal-table th:nth-child(2),.legal-table td:nth-child(2){min-width:120px;}
 }
+
+/* V1.6.2a header language switch and tablet navigation refinement */
+.header{
+  gap:18px;
+  padding-left:4vw;
+  padding-right:4vw;
+}
+.logo img{
+  width:240px;
+}
+.nav{
+  gap:20px;
+  flex:0 1 auto;
+  min-width:0;
+}
+.nav a{
+  white-space:nowrap;
+  word-break:keep-all;
+  line-height:1.25;
+}
+.header-actions{
+  gap:10px;
+  flex:0 0 auto;
+}
+.header-actions .btn{
+  padding:13px 20px;
+}
+.language-switcher{
+  gap:4px;
+}
+.language-switcher span:not(.language-divider){
+  display:none;
+}
+.language-divider{
+  color:#8aa0b8;
+  font-weight:900;
+  font-size:14px;
+  line-height:1;
+}
+.language-switcher button{
+  min-width:32px;
+  height:32px;
+  padding:0 8px;
+  box-shadow:none;
+}
+.header-language-switcher{
+  margin-left:4px;
+}
+
+@media(max-width:1440px){
+  .header{
+    padding-left:3.2vw;
+    padding-right:3.2vw;
+    gap:14px;
+  }
+  .logo img{
+    width:220px;
+  }
+  .nav{
+    gap:16px;
+    font-size:15px;
+  }
+  .header-actions .btn{
+    padding:12px 16px;
+  }
+}
+
+/* iPad / small notebook: keep CTA visible, move full navigation and language switch into menu. */
+@media(max-width:1320px){
+  .header{
+    min-height:92px;
+    padding-left:4vw;
+    padding-right:4vw;
+  }
+  .logo img{
+    width:210px;
+    max-height:84px;
+  }
+  .mobile-menu{
+    display:block;
+    flex:0 0 auto;
+  }
+  .header-actions{
+    display:flex;
+    margin-left:auto;
+  }
+  .header-language-switcher{
+    display:none;
+  }
+  .nav{
+    display:none;
+    position:absolute;
+    top:92px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    align-items:stretch;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:14px 24px;
+    box-shadow:var(--shadow);
+    gap:4px;
+    font-size:16px;
+  }
+  .nav.open{
+    display:flex;
+  }
+  .nav a{
+    padding:12px 0;
+    white-space:nowrap;
+    word-break:keep-all;
+  }
+  .nav-language-switcher{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin-top:8px;
+    padding-top:12px;
+    border-top:1px solid var(--line);
+  }
+}
+
+/* Phone: keep the header clean; CTAs and language switch stay inside the menu. */
+@media(max-width:760px){
+  .header-actions{
+    display:none;
+  }
+}
