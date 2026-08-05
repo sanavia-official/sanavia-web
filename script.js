@@ -51,15 +51,24 @@ document.addEventListener('DOMContentLoaded', function () {
     nodes.forEach(callback);
   }
 
-  function ensureLanguagePanel() {
-    const footer = document.querySelector('.footer');
-    if (!footer || document.querySelector('.language-panel')) return;
-    const panel = document.createElement('div');
-    panel.className = 'language-panel';
-    panel.setAttribute('aria-label', '語言選擇');
-    panel.innerHTML = '<span>語言：</span><button type="button" data-lang-choice="zh-Hant">繁體中文</button><button type="button" data-lang-choice="zh-Hans">简体中文</button>';
-    const copyright = footer.querySelector('.copyright');
-    footer.insertBefore(panel, copyright || null);
+  function createLanguageSwitcher(extraClass) {
+    const switcher = document.createElement('div');
+    switcher.className = 'language-switcher' + (extraClass ? ' ' + extraClass : '');
+    switcher.setAttribute('aria-label', '語言選擇');
+    switcher.innerHTML = '<span>語言</span><button type="button" data-lang-choice="zh-Hant">繁</button><button type="button" data-lang-choice="zh-Hans">简</button>';
+    return switcher;
+  }
+
+  function ensureLanguageSwitcher() {
+    const headerActions = document.querySelector('.header-actions');
+    if (headerActions && !headerActions.querySelector('.language-switcher')) {
+      headerActions.appendChild(createLanguageSwitcher('header-language-switcher'));
+    }
+
+    const nav = document.querySelector('.nav');
+    if (nav && !nav.querySelector('.language-switcher')) {
+      nav.appendChild(createLanguageSwitcher('nav-language-switcher'));
+    }
   }
 
   function setLanguage(lang) {
@@ -85,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  ensureLanguagePanel();
+  ensureLanguageSwitcher();
   document.querySelectorAll('[data-lang-choice]').forEach(function (btn) {
     btn.addEventListener('click', function () { setLanguage(btn.getAttribute('data-lang-choice')); });
   });
