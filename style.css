@@ -385,3 +385,47 @@ details{max-width:900px;margin:14px auto}summary{cursor:pointer;font-size:20px;f
     display:none;
   }
 }
+
+/* V1.6.2b: move language switch back to footer and keep tablet header compact. */
+.footer .footer-language-switcher{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:22px auto 18px;
+}
+.footer .language-switcher .language-label,
+.footer .language-switcher span:not(.language-divider){
+  display:inline;
+  color:#d7e7f8;
+  font-size:15px;
+  font-weight:800;
+}
+.footer .language-switcher button{
+  min-width:auto;
+  height:38px;
+  padding:0 18px;
+  border:1px solid rgba(255,255,255,.62);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:none;
+}
+.footer .language-switcher button:hover,
+.footer .language-switcher button.active{
+  background:#fff;
+  border-color:#fff;
+  color:var(--blue-dark);
+}
+.header-language-switcher,
+.nav-language-switcher{
+  display:none !important;
+}
+@media(max-width:1320px){
+  .nav-language-switcher{
+    display:none !important;
+  }
+}
